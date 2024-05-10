@@ -48,3 +48,13 @@ test('User facing locators', async ({page}) => {
 
     await page.getByTestId('Sign In').click()
 })
+
+test('locating chid elements', async ({page}) => {
+    await page.locator('nb-card nb-radio :text-is("Option 1")').click()
+    await page.locator('nb-card').locator('nb-radio').locator(':text-is("Option 2")').click()
+    //can mix locators to find specific elements. Usualy avoid first or last etc
+    await page.locator('nb-card').getByRole('button', {name: "Sign in"}).first().click()
+
+    //can use index of elements. Not preferred
+    await page.locator('nb-card').nth(3).getByRole('button').click()
+})
