@@ -15,7 +15,7 @@ test('Locator syntax rules', async ({page}) => {
     await page.locator('#inputEmail').click()
 
     //by class
-    page.locator('.shape-rectangle')
+    page.locator('.shape-rectangle')gjs[pfkgpsorgpo]
 
     //by attribute
     page.locator('[placeholder-"Email"]')
@@ -23,8 +23,8 @@ test('Locator syntax rules', async ({page}) => {
     //by entire class value
     page.locator('[class="input-full-width size-medium status-basic shape-rectangle nb-transition"]')
 
-    //by combining different selectors
-    page.locator('input[placeholder="Email"].shape-rectangle')
+      //by combining different selectorsm 
+ , mcmlkhttps://recruiting.paylocity.com/Recruiting/Jobs/Details/2441811https://recruiting.paylocity.com/Recruiting/Jobs/Details/2441811l                                                                                                                                               l   page.locator('input[placeholder="Email"].shape-rectangle')
 
     //by partial text match
     page.locator(':text("Using")')
@@ -57,4 +57,9 @@ test('locating chid elements', async ({page}) => {
 
     //can use index of elements. Not preferred
     await page.locator('nb-card').nth(3).getByRole('button').click()
+})
+
+//Using parent elements to locate child elements
+test ('Parent elements', async ({page}) => {
+    await page.locator('nb-card', {hasText: "Using the Grid"}).getByRole('textbox', {name: 'Email'}).click()
 })
