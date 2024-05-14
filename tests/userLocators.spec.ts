@@ -15,7 +15,7 @@ test('Locator syntax rules', async ({page}) => {
     await page.locator('#inputEmail').click()
 
     //by class
-    page.locator('.shape-rectangle')gjs[pfkgpsorgpo]
+    page.locator('.shape-rectangle')
 
     //by attribute
     page.locator('[placeholder-"Email"]')
@@ -23,9 +23,8 @@ test('Locator syntax rules', async ({page}) => {
     //by entire class value
     page.locator('[class="input-full-width size-medium status-basic shape-rectangle nb-transition"]')
 
-      //by combining different selectorsm 
- , mcmlkhttps://recruiting.paylocity.com/Recruiting/Jobs/Details/2441811https://recruiting.paylocity.com/Recruiting/Jobs/Details/2441811l                                                                                                                                               l   page.locator('input[placeholder="Email"].shape-rectangle')
-
+    //by combining different selectors
+    
     //by partial text match
     page.locator(':text("Using")')
 
