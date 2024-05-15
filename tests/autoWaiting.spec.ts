@@ -37,3 +37,8 @@ test('alternative waits', async ({page}) => {
     expect(text).toContain('Data loaded with AJAX get request.') //method does not have an auto wait
 
 })
+
+test('timeouts', async ({page}) => {
+    const successButton = page.locator('.bg-success')
+    await successButton.click()
+})
