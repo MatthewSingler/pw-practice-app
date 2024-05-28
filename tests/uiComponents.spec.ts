@@ -45,3 +45,15 @@ test.describe('Form Layouts page', () => {  //create the test suite
 
     })
 })
+
+test('checkboxes', async ({page}) => {
+    await page.getByText('Modal & Overlays').click()
+    await page.getByText('Toastr').click()
+    await page.getByRole('checkbox', {name: "Hide on click"}).click({force: true}) //b/c it is visually hidden we need the force flag
+
+    const allCheckBoxes = page.getByRole('checkbox')
+    for(const box of await allCheckBoxes.all()){
+        await box.check({force: true})
+        expect(await box.isChecked()).toBeTruthy()
+    }
+})
